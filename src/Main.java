@@ -44,7 +44,9 @@ class Book {
        System.out.println("----------------------------");
    }
 }
-class Library {}
+class Library {
+    private ArrayList<Book> books = new ArrayList<>();
+}
 public class LibraryManagementSystem {
   public static void main(String[] args){
   }
