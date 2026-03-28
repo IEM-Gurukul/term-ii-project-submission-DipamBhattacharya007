@@ -36,6 +36,13 @@ class Book {
    public void returnBook() {
        isIssued = false;
    }
+   public void displayBook() {
+       System.out.println("Book ID   : " + bookId);
+       System.out.println("Title     : " + title);
+       System.out.println("Author    : " + author);
+       System.out.println("Status    : " + (isIssued ? "Issued" : "Available"));
+       System.out.println("----------------------------");
+   }
 }
 class Library {}
 public class LibraryManagementSystem {
