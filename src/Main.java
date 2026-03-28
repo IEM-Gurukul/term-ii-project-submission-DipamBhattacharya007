@@ -28,6 +28,14 @@ class Book {
    public boolean isIssued() {
        return isIssued;
    }
+   
+   public void issueBook() {
+       isIssued = true;
+   }
+
+   public void returnBook() {
+       isIssued = false;
+   }
 }
 class Library {}
 public class LibraryManagementSystem {
