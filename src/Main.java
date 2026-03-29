@@ -72,6 +72,35 @@ class Library {
        }
        System.out.println("Book not found.");
       }
+    }
+    public void issueBook(int id) {
+       for (Book book : books) {
+           if (book.getBookId() == id) {
+               if (!book.isIssued()) {
+                   book.issueBook();
+                   System.out.println("Book issued successfully.");
+               }else{
+                   System.out.println("Book is already issued.");
+               }
+               return;
+           }
+       }
+       System.out.println("Book not found.");
+   }
+
+   public void returnBook(int id) {
+       for (Book book : books) {
+           if (book.getBookId() == id) {
+               if (book.isIssued()) {
+                   book.returnBook();
+                   System.out.println("Book returned successfully.");
+               }else {
+                   System.out.println("Book was not issued.");
+               }
+               return;
+           }
+       }
+       System.out.println("Book not found.");
    }
 public class LibraryManagementSystem {
   public static void main(String[] args){
