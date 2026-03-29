@@ -46,6 +46,22 @@ class Book {
 }
 class Library {
     private ArrayList<Book> books = new ArrayList<>();
+    public void addBook(Book book) {
+       books.add(book);
+       System.out.println("Book added successfully.");
+    }
+
+    public void viewBooks() {
+       if (books.isEmpty()) {
+           System.out.println("No books available in the library.");
+           return;
+       }
+
+       System.out.println("\n===== Library Books =====");
+       for (Book book : books) {
+           book.displayBook();
+       }
+   }
 }
 public class LibraryManagementSystem {
   public static void main(String[] args){
