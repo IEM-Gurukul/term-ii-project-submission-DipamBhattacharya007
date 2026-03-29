@@ -61,8 +61,18 @@ class Library {
        for (Book book : books) {
            book.displayBook();
        }
+    }
+    public void searchBook(int id) {
+       for (Book book : books) {
+           if (book.getBookId() == id) {
+               System.out.println("Book found:");
+               book.displayBook();
+               return;
+           }
+       }
+       System.out.println("Book not found.");
+      }
    }
-}
 public class LibraryManagementSystem {
   public static void main(String[] args){
   }
